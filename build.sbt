@@ -1,16 +1,18 @@
 import Dependencies._
 
+
+
+
 ThisBuild / scalaVersion     := "2.13.7"
 ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "com.example"
 ThisBuild / organizationName := "example"
 
-
-
-
 lazy val root = (project in file("."))
+  .enablePlugins(ScalaJSPlugin)
   .settings(
     name := "scala-lambda-test",
+    scalaJSUseMainModuleInitializer := true,
     libraryDependencies += scalaTest % Test,
     libraryDependencies += "com.amazonaws" % "aws-lambda-java-core" % "1.2.1",
     libraryDependencies += "com.amazonaws" % "aws-lambda-java-events" % "3.11.0",

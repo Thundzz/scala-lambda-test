@@ -1,5 +1,6 @@
 package example
 
+
 object Hello extends Greeting with App {
   println(greeting)
 }
@@ -7,3 +8,4 @@ object Hello extends Greeting with App {
 trait Greeting {
   lazy val greeting: String = "hello"
 }
+
